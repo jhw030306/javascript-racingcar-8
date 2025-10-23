@@ -1,10 +1,10 @@
-// import { Console, Random } from "@woowacourse/mission-utils";
-import { inputName } from "./input/inputName.js";
-import { inputNumber } from "./input/inputAttemptCount.js";
+import { Console, Random } from "@woowacourse/mission-utils";
+import { inputCar } from "./input/InputCar.js";
+import { inputAttemptCount } from "./input/InputAttemptCount.js";
 class App {
   async run() {
-    const carNames = await inputName();
-    const attemptCount = await inputNumber();
+    const carNames = await inputCar();
+    const attemptCount = await inputAttemptCount();
   }
 }
 
