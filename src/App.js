@@ -26,9 +26,21 @@ async function inputName() {
   }
 }
 
+async function inputNumber() {
+  const numberInput = await Console.readLineAsync(
+    "시도할 횟수는 몇 회인가요?\n"
+  );
+
+  if (numberInput < 1 || !!Number(numberInput)) {
+    throw new errorHandler("정확한 횟수를 입력해주세요.(숫자, 양수)");
+  }
+  Console.print(numberInput);
+}
+
 class App {
   async run() {
     const cars = await inputName();
+    const numberinput = await inputNumber();
   }
 }
 
