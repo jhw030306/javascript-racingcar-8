@@ -8,5 +8,5 @@ export async function inputAttemptCount() {
 
   Validator.validateAttemptCount(attemptCount);
 
-  return attemptCount;
+  return Number(attemptCount);
 }

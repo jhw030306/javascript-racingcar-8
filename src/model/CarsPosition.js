@@ -1,7 +1,7 @@
-export async function carsPositions(carNames) {
+export function carsPositions(carNames) {
   const cars = carNames.map((name) => ({
     name,
-    position: [],
+    position: 0,
   }));
 
   return cars;
