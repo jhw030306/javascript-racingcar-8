@@ -1,12 +1,15 @@
 import { RacingCar } from "../controller/RacingCar.js";
+import { inputAttemptCount } from "../input/InputAttemptCount.js";
+import { inputCar } from "../input/InputCar.js";
 import { carsPositions } from "../model/CarsPosition.js";
 import { Console } from "@woowacourse/mission-utils";
 
-export async function RacingCarView(
-  carNames,
-  attemptCount
-) {
+export async function RacingCarView() {
+  const carNames = await inputCar();
+  const attemptCount = await inputAttemptCount();
   const cars = await carsPositions(carNames);
+
+  Console.print("");
   Console.print("실행 결과");
   for (let i = 0; i < attemptCount; i++) {
     RacingCar(cars);
