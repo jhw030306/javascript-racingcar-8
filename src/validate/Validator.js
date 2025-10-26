@@ -34,6 +34,12 @@ const Validator = {
         "자동차 이름은 숫자로만 구성될 수 없습니다."
       );
     }
+
+    if (cars.some((x) => /[^a-zA-Z가-힣0-9]/.test(x))) {
+      throw new RacingCarError(
+        "자동차 이름은 특수문자를 포함할 수 없습니다."
+      );
+    }
   },
   validateAttemptCount(attemptCount) {
     if (isNaN(attemptCount)) {
