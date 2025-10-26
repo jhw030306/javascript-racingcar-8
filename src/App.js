@@ -1,13 +1,13 @@
-import { inputCar } from "./input/inputCar.js";
-import { inputAttemptCount } from "./input/inputAttemptCount.js";
+import { InputCar } from "./input/InputCar.js";
+import { InputAttemptCount } from "./input/InputAttemptCount.js";
 import { ResultView } from "./view/ResultView.js";
 import { Console } from "@woowacourse/mission-utils";
 
 class App {
   async run() {
     try {
-      const carNames = await inputCar();
-      const attemptCount = await inputAttemptCount();
+      const carNames = await InputCar();
+      const attemptCount = await InputAttemptCount();
 
       await ResultView(carNames, attemptCount);
     } catch (error) {
