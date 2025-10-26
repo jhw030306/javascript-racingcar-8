@@ -1,8 +1,7 @@
 import { RacingCarView } from "../view/RacingCarView.js";
-// import { Console } from "@woowacourse/mission-utils";
 
-export async function GameWinner() {
-  const cars = await RacingCarView();
+export async function GameWinner(carNames, attemptCount) {
+  const cars = await RacingCarView(carNames, attemptCount);
   const distances = cars.map((car) => car.position.length);
 
   const maxDistance = Math.max(...distances);

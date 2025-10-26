@@ -4,9 +4,10 @@ import { inputCar } from "../input/InputCar.js";
 import { carsPositions } from "../model/CarsPosition.js";
 import { Console } from "@woowacourse/mission-utils";
 
-export async function RacingCarView() {
-  const carNames = await inputCar();
-  const attemptCount = await inputAttemptCount();
+export async function RacingCarView(
+  carNames,
+  attemptCount
+) {
   const cars = await carsPositions(carNames);
 
   Console.print("");
