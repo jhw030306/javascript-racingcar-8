@@ -5,7 +5,7 @@ import { Console } from "@woowacourse/mission-utils";
 export function RacingCarView(carNames, attemptCount) {
   const cars = CarsPosition(carNames);
 
-  Console.print("실행 결과");
+  Console.print("\n실행 결과");
   for (let i = 0; i < attemptCount; i++) {
     RacingCar(cars);
 
