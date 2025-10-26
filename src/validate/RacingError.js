@@ -1,6 +1,6 @@
-export class RacingCarError extends Error {
+export class RacingError extends Error {
   constructor(message) {
     super(`[ERROR] ${message}`);
-    this.name = "RacingCarError";
+    this.name = "RacingError";
   }
 }
