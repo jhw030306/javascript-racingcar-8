@@ -1,4 +1,4 @@
-export function carsPositions(carNames) {
+export function CarsPosition(carNames) {
   const cars = carNames.map((name) => ({
     name,
     position: 0,

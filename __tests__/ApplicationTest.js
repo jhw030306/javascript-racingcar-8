@@ -1,12 +1,15 @@
 import App from "../src/App.js";
+import { MissionUtils } from "@woowacourse/mission-utils";
 
 const mockQuestions = (inputs) => {
   MissionUtils.Console.readLineAsync = jest.fn();
 
-  MissionUtils.Console.readLineAsync.mockImplementation(() => {
-    const input = inputs.shift();
-    return Promise.resolve(input);
-  });
+  MissionUtils.Console.readLineAsync.mockImplementation(
+    () => {
+      const input = inputs.shift();
+      return Promise.resolve(input);
+    }
+  );
 };
 
 const mockRandoms = (numbers) => {
@@ -29,7 +32,11 @@ describe("자동차 경주", () => {
     const MOVING_FORWARD = 4;
     const STOP = 3;
     const inputs = ["pobi,woni", "1"];
-    const logs = ["pobi : -", "woni : ", "최종 우승자 : pobi"];
+    const logs = [
+      "pobi : -",
+      "woni : ",
+      "최종 우승자 : pobi",
+    ];
     const logSpy = getLogSpy();
 
     mockQuestions(inputs);
@@ -41,7 +48,9 @@ describe("자동차 경주", () => {
 
     // then
     logs.forEach((log) => {
-      expect(logSpy).toHaveBeenCalledWith(expect.stringContaining(log));
+      expect(logSpy).toHaveBeenCalledWith(
+        expect.stringContaining(log)
+      );
     });
   });
 
