@@ -5,6 +5,7 @@ import {
 import { inputCar } from "./input/InputCar.js";
 import { inputAttemptCount } from "./input/InputAttemptCount.js";
 import { carsPositions } from "./model/CarsPosition.js";
+// import { RacingCar } from "./controller/RacingCar.js";
 
 class App {
   async run() {
@@ -12,6 +13,7 @@ class App {
     const attemptCount = await inputAttemptCount();
 
     const carspositions = await carsPositions(carnames);
+    // const racingcar = await RacingCar(carsPositions);
   }
 }
 
