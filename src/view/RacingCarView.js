@@ -7,6 +7,7 @@ export async function RacingCarView(
   attemptCount
 ) {
   const cars = await carsPositions(carNames);
+  Console.print("실행 결과");
   for (let i = 0; i < attemptCount; i++) {
     RacingCar(cars);
 
@@ -18,4 +19,6 @@ export async function RacingCarView(
 
     Console.print("");
   }
+
+  return cars;
 }

@@ -6,7 +6,8 @@ import { inputCar } from "./input/InputCar.js";
 import { inputAttemptCount } from "./input/InputAttemptCount.js";
 // import { carsPositions } from "./model/CarsPosition.js";
 // import { RacingCar } from "./controller/RacingCar.js";
-import { OutputView } from "./view/RacingCarView.js";
+import { RacingCarView } from "./view/RacingCarView.js";
+import { GameWinner } from "./controller/GameWinner.js";
 
 class App {
   async run() {
@@ -14,7 +15,11 @@ class App {
     const attemptCount = await inputAttemptCount();
 
     // const cars = await carsPositions(carNames);
-    RacingCarView(carNames, attemptCount);
+    const Racingcars = await RacingCarView(
+      carNames,
+      attemptCount
+    );
+    const winner = GameWinner(Racingcars);
   }
 }
 
