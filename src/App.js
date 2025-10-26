@@ -1,5 +1,5 @@
-import { inputCar } from "./input/InputCar.js";
-import { inputAttemptCount } from "./input/InputAttemptCount.js";
+import { inputCar } from "./input/inputCar.js";
+import { inputAttemptCount } from "./input/inputAttemptCount.js";
 import { ResultView } from "./view/ResultView.js";
 import { Console } from "@woowacourse/mission-utils";
 

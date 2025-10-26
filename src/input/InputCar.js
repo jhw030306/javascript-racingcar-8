@@ -10,5 +10,6 @@ export async function inputCar() {
     .split(",")
     .map((name) => name.trim());
   Validator.validateCars(carNames);
+
   return carNames;
 }
